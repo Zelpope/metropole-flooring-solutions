@@ -74,21 +74,21 @@ const AboutSection = () => {
               <span className="text-sm font-medium text-primary">About Us</span>
             </div>
             <h2 className="font-heading text-3xl md:text-4xl font-bold text-foreground">
-              Indonesia's Only Authorized Chichibu Floor Hardener Distributor Since 1997
+              Indonesia's Only Authorized Chichibu Floor Hardener Distributor since 1997
             </h2>
             <p className="text-muted-foreground leading-relaxed">
-              PT Metropole Trikarya Ciptaperkasa is a continuation of PT Metropole Trading Company,
+              PT Metropole Trikarya Ciptaperkasa is a continuation of Metropole Trading Company,
               established on 12 December 1997. We specialize in industrial flooring systems, supplying 
               and applying premium materials for floor hardener, liquid hardener, and waterproofing solutions.
             </p>
             <p className="text-muted-foreground leading-relaxed">
               As the authorized agent and distributor of Chichibu Concrete Industry Co., Ltd. (Japan) and 
               Tuffloor, we have completed over 1,200 projects across Indonesia, including the Jakarta MRT 
-              Phase 1 (Bundaran HI – Lebak Bulus), where our Chichibu floor hardener—both powder and liquid—
+              Phase 1 (Lebak Bulus - Bundaran HI ) and Phase 2 (Monas - Kota tua), where our Chichibu floor hardener—both powder and liquid—
               was selected for its Japanese-standard Mohs hardness of 8.
             </p>
             <p className="text-muted-foreground leading-relaxed">
-            <strong>Looking for premium floor hardener in Indonesia ?</strong> As the exclusive Chichibu distributor in Indonesia, we supply authentic Japanese-standard floor hardener materials with Mohs hardness 8 rating. Our liquid floor hardener and dry shake solutions serve factories, warehouses, logistics centers, and industrial facilities throughout Jabodetabek, Semarang, Surabaya, Kalimantan, Sumatra and beyond.
+            <strong>Looking for premium floor hardener in Indonesia ?</strong> As the exclusive Chichibu distributor in Indonesia, we supply authentic Japanese-standard floor hardener materials with Mohs hardness 8 rating. Our liquid floor hardener and dry shake solutions serve factories, warehouses, logistics centers, and industrial facilities throughout Sumatra, Jabodetabek, Semarang, Surabaya, Kalimantan,  and beyond.
             </p>
             <p className="text-muted-foreground leading-relaxed">
               We serve factories, warehouses, car parks, logistics hubs, and industrial facilities nationwide.

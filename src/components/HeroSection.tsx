@@ -33,15 +33,25 @@ const HeroSection = () => {
       <div className="container mx-auto px-4 py-16 md:py-24 relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="space-y-6">
+            <div className="space-y-2">
+            <div className="space-y-2">
             <div className="inline-block px-4 py-2 bg-primary/10 rounded-full">
               <span className="text-sm font-medium text-primary">Exclusive Chichibu Floor Hardener Distributor Indonesia</span>
             </div>
+            
+            {/* Company Name - Large & Prominent */}
             <h1 className="font-heading text-4xl md:text-5xl lg:text-6xl font-bold text-foreground leading-tight">
-              PT Metropole<br />
-              <span className="text-primary">Trikarya Ciptaperkasa</span>
+              PT Metropole Trikarya Ciptaperkasa
             </h1>
+            
+            {/* SEO-Rich Subtitle - H2 but styled like H1 continuation */}
+            <h2 className="font-heading text-2xl md:text-3xl lg:text-4xl font-semibold text-primary leading-tight">
+              Authorized Chichibu Distributor Indonesia
+            </h2>
+          </div>
+          </div>
             <p className="text-lg text-muted-foreground max-w-xl">
-            Indonesia's exclusive authorized distributor of Chichibu Japan and Tuffloor floor hardener since 1997. We provide premium liquid floor hardener, dry shake hardener, and industrial floor repair solutions for factories, warehouses, and facilities across Jakarta, Karawang, Cikarang, and nationwide. Trusted by MRT Jakarta, Mitsubishi, Sharp, and 1,200+ major projects.
+            Indonesia's exclusive authorized distributor of Chichibu Japan and Tuffloor floor hardener since 1997. We provide premium liquid floor hardener, dry shake hardener, and industrial floor repair solutions for factories, warehouses, and facilities across Jakarta, Cikarang, Karawang, Cikampek, and nationwide. Trusted by MRT Jakarta, Mitsubishi, Sharp, and 1,200+ major projects.
             </p>
             <div className="flex flex-wrap gap-4">
               <Button size="lg" onClick={() => scrollToSection('#services')} className="gap-2">

@@ -23,14 +23,14 @@ const Footer = () => {
               </span>
             </div>
             <p className="text-sm text-background/70">
-            Indonesia's only authorized Chichibu Japan and Tuffloor distributor. Industrial floor hardener specialist since 1997. Serving Jakarta, Karawang, Cikarang, Bekasi, Tangerang, and nationwide with premium liquid hardener, dry shake, and floor repair solutions.
+            Indonesia's only authorized Chichibu Japan and Tuffloor distributor. Industrial floor hardener specialist since 1997. Serving Jakarta, Cibitung, Cikarang, Karawang, Cikampek, Bandung, Bekasi, Tangerang, and nationwide with premium liquid hardener, dry shake, and floor repair solutions.
             </p>
           </div>
 
           <div>
             <h4 className="font-semibold mb-4">Quick Links</h4>
             <ul className="space-y-2">
-              {['Home', 'About', 'Services', 'Projects', 'Blog', 'Contact'].map((link) => (
+              {['Home', 'About', 'Services', 'Projects', 'Contact'].map((link) => (
                 <li key={link}>
                   <button
                     onClick={() => scrollToSection(`#${link.toLowerCase()}`)}
