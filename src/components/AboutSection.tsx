@@ -88,7 +88,7 @@ const AboutSection = () => {
               was selected for its Japanese-standard Mohs hardness of 8.
             </p>
             <p className="text-muted-foreground leading-relaxed">
-            <strong>Looking for premium floor hardener in Jakarta, Karawang, or Cikarang?</strong> As the exclusive Chichibu distributor in Indonesia, we supply authentic Japanese-standard floor hardener materials with Mohs hardness 8 rating. Our liquid floor hardener and dry shake solutions serve factories, warehouses, logistics centers, and industrial facilities throughout Jabodetabek, Semarang, Surabaya, Kalimantan, Sumatra and beyond.
+            <strong>Looking for premium floor hardener in Indonesia ?</strong> As the exclusive Chichibu distributor in Indonesia, we supply authentic Japanese-standard floor hardener materials with Mohs hardness 8 rating. Our liquid floor hardener and dry shake solutions serve factories, warehouses, logistics centers, and industrial facilities throughout Jabodetabek, Semarang, Surabaya, Kalimantan, Sumatra and beyond.
             </p>
             <p className="text-muted-foreground leading-relaxed">
               We serve factories, warehouses, car parks, logistics hubs, and industrial facilities nationwide.
