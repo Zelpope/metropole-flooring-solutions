@@ -1,41 +1,61 @@
 const projects = [
   {
-    title: 'Jakarta MRT Phase 1',
-    location: 'Bundaran HI – Lebak Bulus',
+    title: 'Jakarta MRT Phase 1 and Phase 2',
+    location: 'Jakarta',
     category: 'Transportation',
     image: '/images/ProjectLogos/mrt-jakarta-logo.png',
   },
   {
-    title: 'Automotive Factory',
-    location: 'Cikarang Industrial Estate',
-    category: 'Manufacturing',
-    image: 'https://images.unsplash.com/photo-1565793298595-6a879b1d9492?w=600&auto=format&fit=crop',
+    title: 'Warehouse',
+    location: 'Semarang',
+    category: 'Storage',
+    image: '/images/ProjectLogos/astra-logo.png',
   },
   {
-    title: 'Logistics Warehouse',
-    location: 'Cakung, Jakarta',
-    category: 'Logistics',
-    image: 'https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=600&auto=format&fit=crop',
+    title: 'Factory',
+    location: 'Karawang',
+    category: 'Production',
+    image: '/images/ProjectLogos/sharp-logo.png',
   },
   {
-    title: 'Distribution Center',
-    location: 'Bekasi Industrial Area',
-    category: 'Distribution',
-    image: 'https://images.unsplash.com/photo-1553413077-190dd305871c?w=600&auto=format&fit=crop',
+    title: 'Tire Factory',
+    location: 'Delta Mas Cibatu - Cikarang Pusat',
+    category: 'Production',
+    image: '/images/ProjectLogos/Maxxis-Logo.png',
   },
   {
-    title: 'Food Processing Plant',
-    location: 'Tangerang',
-    category: 'Food & Beverage',
-    image: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=600&auto=format&fit=crop',
+    title: 'Service area and Stockyards',
+    location: 'Jakarta, Bekasi, Depok, Purwokerto, Tangerang, Pontianak, Surabaya',
+    category: 'Automotive',
+    image: '/images/ProjectLogos/mitsubishi-logo.png',
   },
   {
-    title: 'Underground Parking',
-    location: 'Jakarta CBD',
-    category: 'Commercial',
-    image: 'https://images.unsplash.com/photo-1506521781263-d8422e82f27a?w=600&auto=format&fit=crop',
+    title: 'Warehouse',
+    location: 'Cibitung',
+    category: 'Storage',
+    image: '/images/ProjectLogos/daiwa-logo.png',
   },
+  {
+    title: 'Factory',
+    location: 'Cikarang, Medan, Palembang, Pasuruan, Semarang, Cikande',
+    category: 'Industrial',
+    image: '/images/ProjectLogos/logo-sariroti.png', 
+  },
+  {
+    title: 'Shoe Factory',
+    location: 'Cianjur',
+    category: 'Production',
+    image: '/images/ProjectLogos/Converse_logo.png',
+  },
+  {
+    title: 'Motorcycle Factory',
+    location: 'Cibitung',
+    category: 'Production',
+    image: '/images/ProjectLogos/logo-kawasaki.jpg',
+  },
+
 ];
+
 
 const ProjectsSection = () => {
   return (
@@ -63,7 +83,7 @@ const ProjectsSection = () => {
                 <img
                   src={project.image}
                   alt={project.title}
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                  className="w-full h-full object-contain bg-white p-4 group-hover:scale-105 transition-transform duration-300"
                 />
               </div>
               <div className="p-5">

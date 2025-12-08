@@ -17,7 +17,7 @@ const ContactSection = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     
-    const subject = encodeURIComponent(`Contact from ${formData.name}`);
+    const subject = encodeURIComponent(`Requesting quotation info from ${formData.name}`);
     const body = encodeURIComponent(
       `Name: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`
     );
@@ -88,11 +88,14 @@ const ContactSection = () => {
               </div>
             </div>
 
-            <div className="aspect-video rounded-xl overflow-hidden border border-border">
+            {/* ⭐ FIXED FULL-WIDTH GOOGLE MAP */}
+            <div
+              className="relative w-full rounded-xl overflow-hidden border border-border"
+              style={{ paddingTop: '56.25%' }} // 16:9 aspect ratio
+            >
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.6663434968383!2d106.81774597499191!3d-6.156430993846389!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f5d2e764b12d%3A0x3d2ad6e1e0e9bcc8!2sJl.%20Hayam%20Wuruk%20No.62%2C%20RT.7%2FRW.6%2C%20Mangga%20Besar%2C%20Kec.%20Taman%20Sari%2C%20Kota%20Jakarta%20Barat%2C%20Daerah%20Khusus%20Ibukota%20Jakarta%2011160!5e0!3m2!1sen!2sid!4v1701234567890!5m2!1sen!2sid"
-                width="100%"
-                height="100%"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.797488778107!2d106.81634017455566!3d-6.157871393829286!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f60a0ab8627d%3A0x6667848cf44df3c1!2sMetropole%20Trading%20Company!5e0!3m2!1sen!2sid!4v1764917196368!5m2!1sen!2sid"
+                className="absolute inset-0 w-full h-full"
                 style={{ border: 0 }}
                 allowFullScreen
                 loading="lazy"

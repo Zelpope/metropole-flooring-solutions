@@ -1,7 +1,25 @@
+import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { ArrowRight, Phone } from 'lucide-react';
 
+const heroImages = [
+  '/images/Top side/pic 1.png',
+  '/images/Top side/pic 2.png',
+  '/images/Top side/pic 3.jpg',
+  '/images/Top side/pic 4.png',
+];
+
 const HeroSection = () => {
+  const [index, setIndex] = useState(0);
+
+  // auto-rotate every 4 seconds
+  useEffect(() => {
+    const id = setInterval(() => {
+      setIndex((i) => (i + 1) % heroImages.length);
+    }, 2500);
+    return () => clearInterval(id);
+  }, []);
+
   const scrollToSection = (href: string) => {
     const element = document.querySelector(href);
     if (element) {
@@ -50,14 +68,23 @@ const HeroSection = () => {
               </div>
             </div>
           </div>
+
           <div className="relative">
-            <div className="aspect-[4/3] bg-gradient-to-br from-primary/20 to-primary/5 rounded-2xl overflow-hidden">
-              <img
-                src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=800&auto=format&fit=crop"
-                alt="Industrial flooring construction"
-                className="w-full h-full object-cover"
-              />
+            {/* Rotating hero images - fade transition */}
+            <div className="aspect-[4/3] bg-gradient-to-br from-primary/20 to-primary/5 rounded-2xl overflow-hidden relative">
+              {heroImages.map((src, i) => (
+                <img
+                  key={src}
+                  src={src}
+                  alt={`Hero ${i + 1}`}
+                  className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ease-in-out ${
+                    i === index ? 'opacity-100' : 'opacity-0'
+                  }`}
+                  loading="lazy"
+                />
+              ))}
             </div>
+
             <div className="absolute -bottom-6 -left-6 bg-background p-6 rounded-xl shadow-lg border border-border">
               <p className="text-sm font-medium text-muted-foreground">Trusted Partner of</p>
               <p className="text-lg font-semibold text-foreground">Chichibu Japan & Tuffloor</p>
