@@ -34,14 +34,14 @@ const HeroSection = () => {
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="space-y-6">
             <div className="inline-block px-4 py-2 bg-primary/10 rounded-full">
-              <span className="text-sm font-medium text-primary">Industrial Flooring Specialist</span>
+              <span className="text-sm font-medium text-primary">Exclusive Chichibu Floor Hardener Distributor Indonesia</span>
             </div>
             <h1 className="font-heading text-4xl md:text-5xl lg:text-6xl font-bold text-foreground leading-tight">
               PT Metropole<br />
               <span className="text-primary">Trikarya Ciptaperkasa</span>
             </h1>
             <p className="text-lg text-muted-foreground max-w-xl">
-              PT Metropole Trikarya Ciptaperkasa is an industrial flooring specialist providing high-performance floor hardener, liquid hardener, and waterproofing solutions—supported by premium materials from Chichibu Japan and Tuffloor to enhance durability, strength, and long-term performance in industrial environments.
+            Indonesia's exclusive authorized distributor of Chichibu Japan and Tuffloor floor hardener since 1997. We provide premium liquid floor hardener, dry shake hardener, and industrial floor repair solutions for factories, warehouses, and facilities across Jakarta, Karawang, Cikarang, and nationwide. Trusted by MRT Jakarta, Mitsubishi, Sharp, and 1,200+ major projects.
             </p>
             <div className="flex flex-wrap gap-4">
               <Button size="lg" onClick={() => scrollToSection('#services')} className="gap-2">

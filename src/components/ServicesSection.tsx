@@ -1,5 +1,13 @@
+// ServicesSection.tsx
 import { useState } from 'react';
-import { Droplets, Layers, Wrench, ArrowRight, ChevronLeft, ChevronRight } from 'lucide-react';
+import {
+  Droplets,
+  Layers,
+  Wrench,
+  ArrowRight,
+  ChevronLeft,
+  ChevronRight,
+} from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 type Service = {
@@ -10,6 +18,7 @@ type Service = {
   images: string[];
   imageClass?: string;
   wrapperClass?: string;
+  keywords?: string[]; // added for SEO alt text generation
 };
 
 const services: Service[] = [
@@ -17,10 +26,16 @@ const services: Service[] = [
     icon: Droplets,
     title: 'Liquid Floor Hardener',
     description:
-      'Our liquid floor hardener penetrates deep into concrete surfaces, chemically reacting to create a harder, denser surface. Ideal for warehouses, factories, and high-traffic industrial areas requiring superior abrasion resistance.',
-    features: ['Deep penetration formula', 'Dustproofing properties', 'Chemical resistance', 'Low maintenance'],
+      'Premium Chichibu liquid floor hardener from Japan penetrates deep into concrete, creating a harder, denser industrial floor surface. Ideal for warehouse floors, factory flooring, and high-traffic areas in Jakarta and throughout Indonesia. Our liquid hardener provides superior abrasion resistance, dustproofing, and chemical resistance for maximum durability.',
+    features: [
+      'Deep penetration formula',
+      'Dustproofing properties',
+      'Chemical resistance',
+      'Low maintenance',
+    ],
     imageClass: 'w-full h-full object-cover flex-shrink-0',
-    wrapperClass: 'relative aspect-video bg-background rounded-xl overflow-hidden group',
+    wrapperClass:
+      'relative aspect-video bg-background rounded-xl overflow-hidden group',
     images: [
       '/images/liquid/pic 1.jpeg',
       '/images/liquid/pic 2.jpg',
@@ -29,32 +44,59 @@ const services: Service[] = [
       '/images/liquid/pic 5.jpeg',
       '/images/liquid/pic 6.jpeg',
     ],
+    keywords: [
+      'Chichibu distributor Indonesia',
+      'Chichibu floor hardener Indonesia',
+      'Liquid floor hardener Indonesia',
+      'Floor hardener Jakarta',
+      'Tuffloor Indonesia',
+      'Lantai pabrik',
+      'Lantai gudang',
+      'Jasa floor hardener Jakarta',
+    ],
   },
   {
     icon: Layers,
     title: 'Dry Shake Floor Hardener',
     description:
-      'Premium dry shake hardener with metallic or non-metallic aggregates, broadcast onto fresh concrete for exceptional surface hardness. Achieves Mohs hardness of 8 with Chichibu Japanese-standard materials.',
-    features: ['Mohs hardness 8 rating', 'Metallic & non-metallic options', 'Integral color options', 'Seamless application'],
+      'Authentic Chichibu dry shake floor hardener with metallic aggregates, achieving Mohs hardness 8 – the Japanese gold standard. Perfect for new concrete floors in factories, warehouses, and logistics centers across Jakarta, Karawang, Cikarang, and Indonesia. As the only authorized Chichibu distributor in Indonesia, we guarantee genuine Japanese quality for your industrial flooring projects.',
+    features: [
+      'Mohs hardness 8 rating',
+      'Metallic & non-metallic options',
+      'Integral color options',
+      'Seamless application',
+    ],
     imageClass: 'w-full h-full object-cover flex-shrink-0',
-    wrapperClass: 'relative aspect-video bg-background rounded-xl overflow-hidden group',
+    wrapperClass:
+      'relative aspect-video bg-background rounded-xl overflow-hidden group',
     images: [
-        '/images/dry/pic 1.jpeg',
-        '/images/dry/pic 2.jpg',
-        '/images/dry/pic 3.jpeg',
-        '/images/dry/pic 4.jpg',
-        '/images/dry/pic 5.jpeg',
-        '/images/dry/pic 6.jpg',
-      ],
-
+      '/images/dry/pic 1.jpeg',
+      '/images/dry/pic 2.jpg',
+      '/images/dry/pic 3.jpeg',
+      '/images/dry/pic 4.jpg',
+      '/images/dry/pic 5.jpeg',
+      '/images/dry/pic 6.jpg',
+    ],
+    keywords: [
+      'Chichibu distributor Indonesia',
+      'Dry shake floor hardener Indonesia',
+      'Floor hardener Indonesia',
+      'Floor hardener Jakarta',
+      'Distributor resmi Chichibu Indonesia',
+      'Lantai gudang',
+    ],
   },
   {
     icon: Wrench,
     title: 'Repair & Surface Restoration',
     description:
-      'Comprehensive repair services for damaged industrial floors, including crack repair, surface restoration, and protective coating application. We restore floors to optimal condition with minimal downtime.',
-    features: ['Crack & joint repair', 'Surface leveling', 'Protective coatings', 'Quick turnaround'],
-    // Repair uses contain so portrait images show fully; white bg keeps it clean
+      'Professional industrial floor repair services across Jakarta and Indonesia. We restore damaged warehouse floors, factory floors, and parking areas using premium Chichibu and Tuffloor materials. Our repair solutions include crack repair, surface leveling, and protective coatings with minimal downtime. Serving Jabodetabek, Bekasi, Karawang, Cikarang, Tangerang, and all major industrial zones nationwide.',
+    features: [
+      'Crack & joint repair',
+      'Surface leveling',
+      'Protective coatings',
+      'Quick turnaround',
+    ],
     imageClass: 'w-full h-full object-contain bg-white flex-shrink-0',
     wrapperClass: 'relative aspect-video bg-white rounded-xl overflow-hidden group',
     images: [
@@ -64,19 +106,41 @@ const services: Service[] = [
       '/images/repair/pic 4.JPG',
       '/images/repair/pic 5.JPG',
     ],
+    keywords: [
+      'Floor repair Indonesia',
+      'Surface restoration Jakarta',
+      'Lantai pabrik repair',
+      'Floor hardener Indonesia',
+      'Chichibu distributor Indonesia',
+    ],
   },
 ];
+
+const generateAltText = (title: string, index: number, keywords: string[]) => {
+  // Keep alt readable, include high-priority phrases first
+  const top = [
+    'Authorized distributor of Chichibu Japan in Indonesia',
+    'Chichibu floor hardener Indonesia',
+  ];
+  // merge top + provided keywords but avoid duplicates
+  const merged = [...new Set([...top, ...(keywords || [])])];
+  // limit length to keep it concise for screen readers and SEO (avoid too long alt)
+  const joined = merged.slice(0, 6).join(', ');
+  return `${title} — ${joined} — image ${index + 1}`;
+};
 
 const ServiceImageGallery = ({
   images,
   title,
   imageClass = 'w-full h-full object-cover flex-shrink-0',
   wrapperClass = 'relative aspect-video bg-background rounded-xl overflow-hidden group',
+  keywords = [],
 }: {
   images: string[];
   title: string;
   imageClass?: string;
   wrapperClass?: string;
+  keywords?: string[];
 }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
@@ -99,7 +163,9 @@ const ServiceImageGallery = ({
           <img
             key={`${index}-${image}`}
             src={image}
-            alt={`${title} - Image ${index + 1}`}
+            alt={generateAltText(title, index, keywords)}
+            title={`${title} — ${keywords && keywords.length ? keywords[0] : ''}`}
+            data-keywords={keywords.join('|')}
             className={imageClass}
             loading="lazy"
           />
@@ -138,8 +204,39 @@ const ServicesSection = () => {
     }
   };
 
+  // Small JSON-LD block to help search engines understand your services and the Chichibu partnership
+  const jsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'LocalBusiness',
+    name: 'PT Metropole Trikarya Ciptaperkasa',
+    url: typeof window !== 'undefined' ? window.location.href : 'https://example.com',
+    description:
+      'Authorized distributor of Chichibu Japan and Tuffloor in Indonesia — industrial flooring systems, floor hardener, liquid hardener, and waterproofing.',
+    address: {
+      '@type': 'PostalAddress',
+      streetAddress: 'Jl. Hayam Wuruk 62',
+      addressLocality: 'Jakarta',
+      postalCode: '11160',
+      addressCountry: 'ID',
+    },
+    service: services.map((s) => ({
+      '@type': 'Service',
+      name: s.title,
+      description: s.description,
+      provider: {
+        '@type': 'Organization',
+        name: 'PT Metropole Trikarya Ciptaperkasa',
+      },
+      serviceType: s.title,
+      areaServed: 'Indonesia',
+    })),
+  };
+
   return (
     <section id="services" className="py-20 md:py-28 bg-secondary">
+      {/* JSON-LD for SEO */}
+      <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
+
       <div className="container mx-auto px-4">
         <div className="text-center max-w-3xl mx-auto mb-16">
           <div className="inline-block px-4 py-2 bg-primary/10 rounded-full mb-4">
@@ -157,7 +254,9 @@ const ServicesSection = () => {
           {services.map((service, index) => (
             <div
               key={service.title}
-              className={`grid lg:grid-cols-2 gap-8 items-center ${index % 2 === 1 ? 'lg:flex-row-reverse' : ''}`}
+              className={`grid lg:grid-cols-2 gap-8 items-center ${
+                index % 2 === 1 ? 'lg:flex-row-reverse' : ''
+              }`}
             >
               <div className={`${index % 2 === 1 ? 'lg:order-2' : ''}`}>
                 <ServiceImageGallery
@@ -165,6 +264,7 @@ const ServicesSection = () => {
                   title={service.title}
                   imageClass={service.imageClass}
                   wrapperClass={service.wrapperClass}
+                  keywords={service.keywords}
                 />
               </div>
               <div className={`space-y-4 ${index % 2 === 1 ? 'lg:order-1' : ''}`}>
@@ -172,7 +272,9 @@ const ServicesSection = () => {
                   <service.icon className="h-4 w-4 text-primary" />
                   <span className="text-sm font-medium text-primary">Service</span>
                 </div>
-                <h3 className="font-heading text-2xl md:text-3xl font-bold text-foreground">{service.title}</h3>
+                <h3 className="font-heading text-2xl md:text-3xl font-bold text-foreground">
+                  {service.title}
+                </h3>
                 <p className="text-muted-foreground leading-relaxed">{service.description}</p>
                 <ul className="grid grid-cols-2 gap-3 pt-2">
                   {service.features.map((feature) => (

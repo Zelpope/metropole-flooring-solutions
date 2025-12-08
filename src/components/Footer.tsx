@@ -23,7 +23,7 @@ const Footer = () => {
               </span>
             </div>
             <p className="text-sm text-background/70">
-              Industrial flooring specialist since 1997. Authorized distributor of Chichibu Japan and Tuffloor in Indonesia.
+            Indonesia's only authorized Chichibu Japan and Tuffloor distributor. Industrial floor hardener specialist since 1997. Serving Jakarta, Karawang, Cikarang, Bekasi, Tangerang, and nationwide with premium liquid hardener, dry shake, and floor repair solutions.
             </p>
           </div>
 
