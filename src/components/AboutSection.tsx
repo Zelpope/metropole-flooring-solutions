@@ -2,11 +2,11 @@ import { useState, useEffect } from 'react';
 import { CheckCircle, Award, Building2, Users } from 'lucide-react';
 
 const rotatingImages = [
-  "/images/About us images/pic 1.jpeg",
-  "/images/About us images/pic 2.jpg",
-  "/images/About us images/pic 3.jpg",
-  "/images/About us images/pic 4.jpg",
-  "/images/About us images/pic 5.jpg",  
+  import.meta.env.BASE_URL + "/images/About us images/pic 1.jpeg",
+  import.meta.env.BASE_URL + "/images/About us images/pic 2.jpg",
+  import.meta.env.BASE_URL + "/images/About us images/pic 3.jpg",
+  import.meta.env.BASE_URL + "/images/About us images/pic 4.jpg",
+  import.meta.env.BASE_URL + "/images/About us images/pic 5.jpg",  
 ];
 
 const features = [

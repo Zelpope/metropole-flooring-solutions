@@ -3,10 +3,10 @@ import { Button } from '@/components/ui/button';
 import { ArrowRight, Phone } from 'lucide-react';
 
 const heroImages = [
-  '/images/Top side/pic 1.png',
-  '/images/Top side/pic 2.png',
-  '/images/Top side/pic 3.jpg',
-  '/images/Top side/pic 4.png',
+  import.meta.env.BASE_URL + '/images/Top side/pic 1.png',
+  import.meta.env.BASE_URL + '/images/Top side/pic 2.png',
+  import.meta.env.BASE_URL + '/images/Top side/pic 3.jpg',
+  import.meta.env.BASE_URL + '/images/Top side/pic 4.png',
 ];
 
 const HeroSection = () => {
