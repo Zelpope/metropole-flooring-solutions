@@ -88,10 +88,24 @@ const ContactSection = () => {
               </div>
             </div>
 
-            {/* ⭐ FIXED FULL-WIDTH GOOGLE MAP */}
+            {/* Service Coverage Area - NEW ADDITION */}
+            <div className="p-6 bg-primary/5 rounded-xl border border-primary/20">
+              <h3 className="font-semibold text-foreground mb-3 flex items-center gap-2">
+                <MapPin className="h-5 w-5 text-primary" />
+                Service Coverage Area
+              </h3>
+              <p className="text-sm text-muted-foreground leading-relaxed">
+                We provide Chichibu and Tuffloor floor hardener installation and repair services throughout{' '}
+                <strong>Jakarta, Bogor, Depok, Tangerang, Bekasi (Jabodetabek), Karawang, Cikarang, 
+                Purwakarta, Cikampek, Bandung, Semarang, Surabaya, Sumatra, Kalimantan, Sulawesi, Papua, Medan,</strong> and all major 
+                industrial areas in Indonesia.
+              </p>
+            </div>
+
+            {/* Google Map */}
             <div
               className="relative w-full rounded-xl overflow-hidden border border-border"
-              style={{ paddingTop: '56.25%' }} // 16:9 aspect ratio
+              style={{ paddingTop: '56.25%' }}
             >
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.797488778107!2d106.81634017455566!3d-6.157871393829286!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f60a0ab8627d%3A0x6667848cf44df3c1!2sMetropole%20Trading%20Company!5e0!3m2!1sen!2sid!4v1764917196368!5m2!1sen!2sid"
