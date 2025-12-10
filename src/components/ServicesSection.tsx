@@ -37,12 +37,12 @@ const services: Service[] = [
     wrapperClass:
       'relative aspect-video bg-background rounded-xl overflow-hidden group',
     images: [
-      import.meta.env.BASE_URL + '/images/liquid/pic 1.jpeg',
-      import.meta.env.BASE_URL + '/images/liquid/pic 2.jpg',
-      import.meta.env.BASE_URL + '/images/liquid/pic 3.jpeg',
-      import.meta.env.BASE_URL + '/images/liquid/pic 4.jpeg',
-      import.meta.env.BASE_URL + '/images/liquid/pic 5.jpeg',
-      import.meta.env.BASE_URL + '/images/liquid/pic 6.jpeg',
+      '/images/liquid/pic 1.jpeg',
+      '/images/liquid/pic 2.jpg',
+      '/images/liquid/pic 3.jpeg',
+      '/images/liquid/pic 4.jpeg',
+      '/images/liquid/pic 5.jpeg',
+      '/images/liquid/pic 6.jpeg',
     ],
     keywords: [
       'Chichibu distributor Indonesia',
@@ -70,12 +70,12 @@ const services: Service[] = [
     wrapperClass:
       'relative aspect-video bg-background rounded-xl overflow-hidden group',
     images: [
-      import.meta.env.BASE_URL + '/images/dry/pic 1.jpeg',
-      import.meta.env.BASE_URL + '/images/dry/pic 2.jpg',
-      import.meta.env.BASE_URL + '/images/dry/pic 3.jpeg',
-      import.meta.env.BASE_URL + '/images/dry/pic 4.jpg',
-      import.meta.env.BASE_URL + '/images/dry/pic 5.jpeg',
-      import.meta.env.BASE_URL + '/images/dry/pic 6.jpg',
+      '/images/dry/pic 1.jpeg',
+      '/images/dry/pic 2.jpg',
+      '/images/dry/pic 3.jpeg',
+      '/images/dry/pic 4.jpg',
+      '/images/dry/pic 5.jpeg',
+      '/images/dry/pic 6.jpg',
     ],
     keywords: [
       'Chichibu distributor Indonesia',
@@ -100,11 +100,11 @@ const services: Service[] = [
     imageClass: 'w-full h-full object-contain bg-white flex-shrink-0',
     wrapperClass: 'relative aspect-video bg-white rounded-xl overflow-hidden group',
     images: [
-      import.meta.env.BASE_URL + '/images/repair/pic 1.jpg',
-      import.meta.env.BASE_URL + '/images/repair/pic 2.jpg',
-      import.meta.env.BASE_URL + '/images/repair/pic 3.jpg',
-      import.meta.env.BASE_URL + '/images/repair/pic 4.JPG',
-      import.meta.env.BASE_URL + '/images/repair/pic 5.JPG',
+      '/images/repair/pic 1.jpg',
+      '/images/repair/pic 2.jpg',
+      '/images/repair/pic 3.jpg',
+      '/images/repair/pic 4.JPG',
+      '/images/repair/pic 5.JPG',
     ],
     keywords: [
       'Floor repair Indonesia',
