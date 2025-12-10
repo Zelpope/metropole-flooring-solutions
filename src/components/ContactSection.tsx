@@ -78,7 +78,7 @@ const ContactSection: React.FC = () => {
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-12">
+        <div className="grid lg:grid-cols-2 gap-12 items-start">
           <div className="space-y-8">
             <div className="space-y-6">
               {/* Office Address */}
@@ -194,7 +194,7 @@ const ContactSection: React.FC = () => {
           </div>
 
           {/* Contact form */}
-          <div className="bg-secondary p-8 rounded-xl">
+          <div className="bg-secondary p-8 rounded-xl w-full lg:w-[700px]">
             <h3 className="font-heading text-xl font-semibold text-foreground mb-6">
               Send us a Message
             </h3>
