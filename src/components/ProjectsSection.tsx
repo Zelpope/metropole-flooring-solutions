@@ -1,5 +1,5 @@
 const projects = [
-  { image : '/images/ProjectLogos/mrt-jakarta-logo.png', alt: 'MRT Jakarta chichibu liquid hardener indonesia' },
+  { image :'/images/ProjectLogos/mrt-jakarta-logo.png', alt: 'MRT Jakarta chichibu liquid hardener indonesia' },
   { image :'/images/ProjectLogos/astra-logo.png', alt: 'Astra Chichibu floor hardener and liquid hardener indonesia' },
   { image :'/images/ProjectLogos/sharp-logo.png', alt: 'Sharp tuffloor hardener indonesia' },
   { image :'/images/ProjectLogos/Maxxis-Logo.png', alt: 'Maxxis tuffloor hardener indonesia' },
