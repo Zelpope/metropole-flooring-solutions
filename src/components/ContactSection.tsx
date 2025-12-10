@@ -194,7 +194,7 @@ const ContactSection: React.FC = () => {
           </div>
 
           {/* Contact form */}
-          <div className="bg-secondary p-8 rounded-xl w-full lg:w-[700px]">
+          <div className="bg-secondary p-8 rounded-xl w-full lg:w-[660px]">
             <h3 className="font-heading text-xl font-semibold text-foreground mb-6">
               Send us a Message
             </h3>
