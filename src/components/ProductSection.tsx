@@ -177,4 +177,72 @@ const ProductSection: React.FC = () => {
   );
 };
 
+<script type="application/ld+json">
+{JSON.stringify({
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Product",
+      "name": "CHICHIBU COLORCONcrete – Premium Dry Shake Floor Hardener",
+      "image": [
+        "https://metropolechichibu.com/images/Products/chichibu-dry-shake-floor-hardener-natural.png",
+        "https://metropolechichibu.com/images/Products/chichibu-dry-shake-floor-hardener-green.png"
+      ],
+      "description": "Premium Japanese dry shake floor hardener for industrial concrete floors with high abrasion resistance and long-term durability.",
+      "brand": { "@type": "Brand", "name": "Chichibu Japan" },
+      "offers": {
+        "@type": "Offer",
+        "url": "https://metropolechichibu.com/#contact",
+        "priceCurrency": "IDR",
+        "availability": "https://schema.org/InStock",
+        "seller": {
+          "@type": "Organization",
+          "name": "PT Metropole Trikarya Ciptaperkasa"
+        }
+      }
+    },
+    {
+      "@type": "Product",
+      "name": "CHICHIBU MULTI-HARDENER – Liquid Concrete Hardener",
+      "image": [
+        "https://metropolechichibu.com/images/Products/chichibu-liquid-floor-hardener.png"
+      ],
+      "description": "Penetrating liquid floor hardener from Chichibu Japan that increases concrete density, hardness, and dust resistance.",
+      "brand": { "@type": "Brand", "name": "Chichibu Japan" },
+      "offers": {
+        "@type": "Offer",
+        "url": "https://metropolechichibu.com/#contact",
+        "priceCurrency": "IDR",
+        "availability": "https://schema.org/InStock",
+        "seller": {
+          "@type": "Organization",
+          "name": "PT Metropole Trikarya Ciptaperkasa"
+        }
+      }
+    },
+    {
+      "@type": "Product",
+      "name": "TUFFLOOR – Dry Shake Floor Hardener",
+      "image": [
+        "https://metropolechichibu.com/images/Products/tuffloor-dry-shake-floor-hardener.png"
+      ],
+      "description": "High-quality non-metallic dry shake floor hardener for warehouses, factories, and industrial floors.",
+      "brand": { "@type": "Brand", "name": "Tuffloor" },
+      "offers": {
+        "@type": "Offer",
+        "url": "https://metropolechichibu.com/#contact",
+        "priceCurrency": "IDR",
+        "availability": "https://schema.org/InStock",
+        "seller": {
+          "@type": "Organization",
+          "name": "PT Metropole Trikarya Ciptaperkasa"
+        }
+      }
+    }
+  ]
+})}
+</script>
+
+
+
 export default ProductSection;
