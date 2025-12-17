@@ -1,32 +1,57 @@
-import { useState } from 'react';
+import React, { useState } from 'react';
 import { Menu, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import logo from '@/assets/favicon.png';
+import { useNavigate, useLocation } from 'react-router-dom';
 
 const navLinks = [
   { name: 'Home', href: '#home' },
   { name: 'About', href: '#about' },
   { name: 'Services', href: '#services' },
   { name: 'Projects', href: '#projects' },
+  { name: 'Products', href: '#products' },
+  // { name: 'Articles', href: '#blog' }, 
   { name: 'Contact', href: '#contact' },
 ];
 
-const Navbar = () => {
+const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const navigate = useNavigate();
+  const location = useLocation();
 
   const scrollToSection = (href: string) => {
-    const element = document.querySelector(href);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
+    // close mobile menu immediately
     setIsOpen(false);
+
+    // If not on homepage, navigate to homepage with hash (Index.tsx will auto-scroll)
+    if (location.pathname !== '/') {
+      navigate(`/${href}`); // href includes the leading '#', so this becomes "/#blog"
+      return;
+    }
+
+    // If on homepage, scroll directly
+    const el = document.querySelector(href);
+    if (el) {
+      el.scrollIntoView({ behavior: 'smooth' });
+      return;
+    }
+
+    // fallback: navigate to homepage with hash
+    navigate(`/${href}`);
   };
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16 md:h-20">
-          <a href="#home" onClick={() => scrollToSection('#home')} className="flex items-center gap-3">
+          <a
+            href="#home"
+            onClick={(e) => {
+              e.preventDefault();
+              scrollToSection('#home');
+            }}
+            className="flex items-center gap-3"
+          >
             <img src={logo} alt="MTC Logo" className="h-10 md:h-12 w-auto" />
             <span className="hidden sm:block text-sm font-semibold text-foreground leading-tight">
               PT Metropole Trikarya<br />Ciptaperkasa

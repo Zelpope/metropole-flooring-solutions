@@ -1,13 +1,26 @@
+import React from 'react';
 import { MapPin, Phone, Mail } from 'lucide-react';
 import logo from '@/assets/favicon.png';
+import { useNavigate, useLocation } from 'react-router-dom';
 
-const Footer = () => {
+const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
+  const navigate = useNavigate();
+  const location = useLocation();
 
-  const scrollToSection = (href: string) => {
-    const element = document.querySelector(href);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+  const scrollOrNavigate = (href: string) => {
+    // If not on homepage, navigate to homepage with hash so Index auto-scrolls
+    if (location.pathname !== '/') {
+      navigate(`/${href}`);
+      return;
+    }
+
+    // if on homepage, scroll directly
+    const el = document.querySelector(href);
+    if (el) {
+      el.scrollIntoView({ behavior: 'smooth' });
+    } else {
+      navigate(`/${href}`);
     }
   };
 
@@ -23,20 +36,28 @@ const Footer = () => {
               </span>
             </div>
             <p className="text-sm text-background/70">
-            Indonesia's only authorized Chichibu Japan and Tuffloor distributor. Industrial floor hardener specialist since 1997. Serving Jakarta, Cibitung, Cikarang, Karawang, Cikampek, Bandung, Bekasi, Tangerang, and nationwide with premium liquid hardener, dry shake, and floor repair solutions.
+              Indonesia's only authorized Chichibu Japan and Tuffloor distributor. Industrial floor hardener specialist since 1997. Serving Jakarta, Cibitung, Cikarang, Karawang, Cikampek, Bandung, Bekasi, Tangerang, and nationwide with premium liquid hardener, dry shake, and floor repair solutions.
             </p>
           </div>
 
           <div>
             <h4 className="font-semibold mb-4">Quick Links</h4>
             <ul className="space-y-2">
-              {['Home', 'About', 'Services', 'Projects', 'Contact'].map((link) => (
-                <li key={link}>
+              {[
+                { label: 'Home', href: '#home' },
+                { label: 'About', href: '#about' },
+                { label: 'Services', href: '#services' },
+                { label: 'Projects', href: '#projects' },
+                { label: 'Products', href: '#products' },
+                // { label: 'Articles', href: '#blog' }, // Temporary Hidden
+                { label: 'Contact', href: '#contact' },
+              ].map((link) => (
+                <li key={link.label}>
                   <button
-                    onClick={() => scrollToSection(`#${link.toLowerCase()}`)}
+                    onClick={() => scrollOrNavigate(link.href)}
                     className="text-sm text-background/70 hover:text-background transition-colors"
                   >
-                    {link}
+                    {link.label}
                   </button>
                 </li>
               ))}

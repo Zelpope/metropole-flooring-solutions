@@ -28,7 +28,7 @@ const HeroSection = () => {
   };
 
   return (
-    <section id="home" className="relative min-h-screen flex items-center pt-20 bg-secondary">
+    <section id="home" className="relative min-h-screen flex items-center bg-secondary">
       <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent" />
       <div className="container mx-auto px-4 py-16 md:py-24 relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
