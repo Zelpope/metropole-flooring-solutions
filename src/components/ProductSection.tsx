@@ -10,46 +10,46 @@ type Product = {
 
 /**
  * SEO-friendly alt text generator
- * Keeps alt text readable, descriptive, and keyword-rich
+ * Optimized for "High-Quality" and "Mohs 8" keywords
  */
 const generateAltText = (
   productName: string,
   index: number,
   total: number
 ) => {
-  return `${productName} for industrial concrete flooring – floor hardener application image ${
+  return `${productName} - High-quality Mohs 8 floor hardener application in Indonesia - image ${
     index + 1
   } of ${total}`;
 };
 
 const products: Product[] = [
   {
-    name: "CHICHIBU COLORCONcrete – Premium Dry Shake Floor Hardener",
+    name: "CHICHIBU COLORCONcrete – Premium Mohs 8 Dry Shake Hardener",
     images: [
       "/images/Products/chichibu-dry-shake-floor-hardener-natural.png",
       "/images/Products/chichibu-dry-shake-floor-hardener-green.png",
     ],
     autoFade: true,
     description:
-      "CHICHIBU COLORCONcrete is a premium dry shake floor hardener from Japan, engineered for industrial concrete floors that demand maximum abrasion resistance, hardness, and long-term durability. Using advanced inorganic pigments and high-grade aggregates, it delivers superior hardness and a dense, long-lasting surface.",
+      "CHICHIBU COLORCONcrete is a high-quality dry shake floor hardener from Japan, engineered for industrial concrete floors that demand a verified Mohs 8 hardness. This premium solution provides maximum abrasion resistance and long-term durability for high-traffic environments like the Jakarta MRT.",
     uses:
-      "Ideal for heavy-duty factory floors, logistics warehouses, premium showrooms, commercial parking areas, shops, and industrial facilities requiring both high performance and aesthetic concrete flooring.",
+      "Ideal for heavy-duty factory floors, logistics warehouses, premium showrooms, and high-performance industrial facilities requiring the best floor hardener in Indonesia.",
   },
   {
-    name: "CHICHIBU MULTI-HARDENER – Liquid Concrete Hardener",
+    name: "CHICHIBU MULTI-HARDENER – Mohs 8 Liquid Concrete Hardener",
     images: ["/images/Products/chichibu-liquid-floor-hardener.png"],
     description:
-      "CHICHIBU MULTI-HARDENER is a penetrating liquid floor hardener that reacts chemically with calcium compounds in concrete to increase surface density and hardness. It is an efficient solution for strengthening existing concrete floors with maximum abrasion resistance without demolition or re-casting.",
+      "CHICHIBU MULTI-HARDENER is a high-quality penetrating liquid floor hardener that chemically reacts with concrete to achieve a Mohs 8 hardness rating. It is the premier solution for strengthening existing concrete floors with maximum abrasion resistance and dustproofing without demolition.",
     uses:
-      "Recommended for upgrading existing concrete floors, reducing dusting, routine floor maintenance, and light-to-medium duty industrial areas.",
+      "Perfect for industrial floor maintenance, upgrading existing warehouse floors to Mohs 8 standards, and reducing dusting in high-performance facilities nationwide.",
   },
   {
-    name: "TUFFLOOR – Dry Shake Floor Hardener",
+    name: "TUFFLOOR – High-Quality Industrial Dry Shake Hardener",
     images: ["/images/Products/tuffloor-dry-shake-floor-hardener.png"],
     description:
-      "TUFFLOOR is a dry shake floor hardener formulated with non-metallic aggregates to improve the durability and abrasion resistance of industrial concrete floors. It offers excellent performance at a competitive price point for a wide range of applications.",
+      "TUFFLOOR is an industrial-grade dry shake floor hardener formulated with non-metallic aggregates to provide high-quality durability and abrasion resistance. It offers an excellent performance-to-cost ratio for a wide range of Indonesian industrial applications.",
     uses:
-      "Suitable for warehouses, manufacturing plants, parking structures, workshops, and industrial floors exposed to light, medium, and heavy-duty traffic.",
+      "Suitable for warehouses and manufacturing plants in Cikarang, Karawang, and industrial zones across Indonesia exposed to light, medium, and heavy-duty traffic.",
   },
 ];
 
@@ -99,7 +99,7 @@ const StaticImage = ({
   <div className="h-96 bg-white flex items-center justify-center">
     <img
       src={src}
-      alt={`${name} for industrial concrete flooring – floor hardener product image`}
+      alt={`${name} - High-quality Mohs 8 industrial floor hardener product image`}
       className="w-full h-full object-contain p-8"
       loading="lazy"
     />
@@ -113,12 +113,12 @@ const ProductSection: React.FC = () => {
         {/* Section Header */}
         <div className="max-w-3xl mx-auto text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-foreground">
-            Industrial Floor Hardener Products
+            High-Quality Mohs 8 Floor Hardener Products
           </h2>
           <p className="mt-4 text-muted-foreground">
             Premium dry shake and liquid floor hardener solutions engineered for
             industrial concrete floors, warehouses, factories, and commercial
-            facilities.
+            facilities in Indonesia.
           </p>
         </div>
 
@@ -172,77 +172,69 @@ const ProductSection: React.FC = () => {
             </article>
           ))}
         </div>
+
+        {/* Structured Data for AI & Search Engines */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@graph": [
+              {
+                "@type": "Product",
+                "name": "CHICHIBU COLORCONcrete – Mohs 8 Dry Shake Hardener",
+                "image": "https://metropolechichibu.com/images/Products/chichibu-dry-shake-floor-hardener-natural.png",
+                "description": "High-quality Japanese dry shake floor hardener for industrial concrete floors verified at Mohs 8 hardness.",
+                "brand": { "@type": "Brand", "name": "Chichibu Japan" },
+                "offers": {
+                  "@type": "Offer",
+                  "url": "https://metropolechichibu.com/#contact",
+                  "priceCurrency": "IDR",
+                  "availability": "https://schema.org/InStock",
+                  "seller": {
+                    "@type": "Organization",
+                    "name": "PT Metropole Trikarya Ciptaperkasa"
+                  }
+                }
+              },
+              {
+                "@type": "Product",
+                "name": "CHICHIBU MULTI-HARDENER – Mohs 8 Liquid Hardener",
+                "image": "https://metropolechichibu.com/images/Products/chichibu-liquid-floor-hardener.png",
+                "description": "Premium liquid concrete hardener from Chichibu Japan achieving Mohs 8 hardness rating for maximum density and dustproofing.",
+                "brand": { "@type": "Brand", "name": "Chichibu Japan" },
+                "offers": {
+                  "@type": "Offer",
+                  "url": "https://metropolechichibu.com/#contact",
+                  "priceCurrency": "IDR",
+                  "availability": "https://schema.org/InStock",
+                  "seller": {
+                    "@type": "Organization",
+                    "name": "PT Metropole Trikarya Ciptaperkasa"
+                  }
+                }
+              },
+              {
+                "@type": "Product",
+                "name": "TUFFLOOR – High-Quality Dry Shake Hardener",
+                "image": "https://metropolechichibu.com/images/Products/tuffloor-dry-shake-floor-hardener.png",
+                "description": "High-quality non-metallic dry shake floor hardener for warehouses, factories, and industrial floors in Indonesia.",
+                "brand": { "@type": "Brand", "name": "Tuffloor" },
+                "offers": {
+                  "@type": "Offer",
+                  "url": "https://metropolechichibu.com/#contact",
+                  "priceCurrency": "IDR",
+                  "availability": "https://schema.org/InStock",
+                  "seller": {
+                    "@type": "Organization",
+                    "name": "PT Metropole Trikarya Ciptaperkasa"
+                  }
+                }
+              }
+            ]
+          })}
+        </script>
       </div>
     </section>
   );
 };
-
-<script type="application/ld+json">
-{JSON.stringify({
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "Product",
-      "name": "CHICHIBU COLORCONcrete – Premium Dry Shake Floor Hardener",
-      "image": [
-        "https://metropolechichibu.com/images/Products/chichibu-dry-shake-floor-hardener-natural.png",
-        "https://metropolechichibu.com/images/Products/chichibu-dry-shake-floor-hardener-green.png"
-      ],
-      "description": "Premium Japanese dry shake floor hardener for industrial concrete floors with high abrasion resistance and long-term durability.",
-      "brand": { "@type": "Brand", "name": "Chichibu Japan" },
-      "offers": {
-        "@type": "Offer",
-        "url": "https://metropolechichibu.com/#contact",
-        "priceCurrency": "IDR",
-        "availability": "https://schema.org/InStock",
-        "seller": {
-          "@type": "Organization",
-          "name": "PT Metropole Trikarya Ciptaperkasa"
-        }
-      }
-    },
-    {
-      "@type": "Product",
-      "name": "CHICHIBU MULTI-HARDENER – Liquid Concrete Hardener",
-      "image": [
-        "https://metropolechichibu.com/images/Products/chichibu-liquid-floor-hardener.png"
-      ],
-      "description": "Penetrating liquid floor hardener from Chichibu Japan that increases concrete density, hardness, and dust resistance.",
-      "brand": { "@type": "Brand", "name": "Chichibu Japan" },
-      "offers": {
-        "@type": "Offer",
-        "url": "https://metropolechichibu.com/#contact",
-        "priceCurrency": "IDR",
-        "availability": "https://schema.org/InStock",
-        "seller": {
-          "@type": "Organization",
-          "name": "PT Metropole Trikarya Ciptaperkasa"
-        }
-      }
-    },
-    {
-      "@type": "Product",
-      "name": "TUFFLOOR – Dry Shake Floor Hardener",
-      "image": [
-        "https://metropolechichibu.com/images/Products/tuffloor-dry-shake-floor-hardener.png"
-      ],
-      "description": "High-quality non-metallic dry shake floor hardener for warehouses, factories, and industrial floors.",
-      "brand": { "@type": "Brand", "name": "Tuffloor" },
-      "offers": {
-        "@type": "Offer",
-        "url": "https://metropolechichibu.com/#contact",
-        "priceCurrency": "IDR",
-        "availability": "https://schema.org/InStock",
-        "seller": {
-          "@type": "Organization",
-          "name": "PT Metropole Trikarya Ciptaperkasa"
-        }
-      }
-    }
-  ]
-})}
-</script>
-
-
 
 export default ProductSection;
