@@ -1,4 +1,15 @@
 User-agent: *
 Allow: /
+Disallow: /private/
+
+# Specific permissions for AI Crawlers (AEO Optimization)
+User-agent: GPTBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Claude-bot
+Allow: /
 
 Sitemap: https://metropolechichibu.com/sitemap.xml
