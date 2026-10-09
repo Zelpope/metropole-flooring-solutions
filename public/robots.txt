@@ -2,7 +2,7 @@ User-agent: *
 Allow: /
 Disallow: /private/
 
-# Specific permissions for AI Crawlers (AEO Optimization)
+# AI Crawlers & LLM Scrapers (AEO / GEO Optimization)
 User-agent: GPTBot
 Allow: /
 
@@ -10,6 +10,15 @@ User-agent: Google-Extended
 Allow: /
 
 User-agent: Claude-bot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Bytespider
+Allow: /
+
+User-agent: cohere-ai
 Allow: /
 
 Sitemap: https://metropolechichibu.com/sitemap.xml

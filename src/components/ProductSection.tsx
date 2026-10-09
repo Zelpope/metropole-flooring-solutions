@@ -22,7 +22,7 @@ const generateAltText = (
 
 const products: Product[] = [
   {
-    name: "CHICHIBU COLORCONcrete – Premium Mohs 8 Dry Shake Hardener",
+    name: "CHICHIBU COLORCONcrete – Premium Emery Aggregate Mohs 8 Dry Shake Hardener",
     images: [
       "/images/Products/chichibu-dry-shake-floor-hardener-natural.png",
       "/images/Products/chichibu-dry-shake-floor-hardener-green.png",
@@ -32,8 +32,8 @@ const products: Product[] = [
     imageUrl:
       "https://metropolechichibu.com/images/Products/chichibu-dry-shake-floor-hardener-natural.png",
     description:
-      "CHICHIBU COLORCONcrete is a high-quality dry shake floor hardener from Japan, engineered for industrial concrete floors that demand a verified Mohs 8 hardness. This premium solution provides maximum abrasion resistance and long-term durability for high-traffic environments like the Jakarta MRT.",
-    uses: "Ideal for heavy-duty factory floors, logistics warehouses, premium showrooms, and high-performance industrial facilities requiring the best floor hardener in Indonesia.",
+      "CHICHIBU COLORCONcrete is a premium emery-based dry shake floor hardener from Japan, engineered for heavy-duty industrial concrete floors that demand a verified Mohs 8 hardness. Containing natural emery aggregates, this high-performance dry shake delivers extreme abrasion and impact resistance for high-traffic environments, industrial facilities, and public infrastructure like the Jakarta MRT.",
+    uses: "Ideal for heavy-duty factory floors, logistics warehouses, loading docks, and industrial facilities where specifications mandate emery aggregate floor hardeners or high-abrasion non-metallic dry shake solutions.",
   },
   {
     name: "CHICHIBU MULTI-HARDENER – Mohs 8 Liquid Concrete Hardener",
@@ -117,7 +117,7 @@ const ProductSection: React.FC = () => {
         {/* Section Header */}
         <div className="max-w-3xl mx-auto text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-foreground">
-            High-Quality Mohs 8 Floor Hardener Products
+            High-Quality Floor Hardener Products
           </h2>
           <p className="mt-4 text-muted-foreground">
             Premium dry shake and liquid floor hardener solutions engineered for
