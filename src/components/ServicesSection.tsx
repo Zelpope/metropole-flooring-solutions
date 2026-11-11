@@ -26,7 +26,7 @@ const services: Service[] = [
     icon: Droplets,
     title: 'Liquid Floor Hardener',
     description:
-      'Premium Chichibu liquid floor hardener from Japan penetrates deep into concrete, creating a harder, denser industrial floor surface. Ideal for warehouse floors, factory flooring, and high-traffic areas in Jakarta and throughout Indonesia. As a premium distributor, we provide high-quality floor hardener in Indonesia that meets Japanese standards. Our Chichibu Multi-Hardener is a liquid solution verified at Mohs 8 hardness..',
+      'Premium Chichibu liquid floor hardener from Japan penetrates deep into concrete, making it the ideal solution to strengthen existing or already finished cement floors without the hassle or expense of demolition. Transforms your current concrete floors into a denser, dustproof, and highly abrasion-resistant surface. Ideal for warehouse floors, factory flooring, and high-traffic areas in Jakarta and throughout Indonesia, our Chichibu Multi-Hardener is a premium liquid solution verified at Mohs 8 hardness that meets strict Japanese standards.',
     features: [
       'Deep penetration formula',
       'Dustproofing properties',
